@@ -1,0 +1,36 @@
+tip? 법칙? 아무튼 이론 메모
+
+1. script 추가는 닫히는 body 바로 앞에.
+2. 변수는 왠만하면 const로 선언. 왜?? -ㅇ-? 꼭 필요할때만 let으로 선언하기
+3. 가끔 헷갈릴때가 있는데 js에서 true = 1, false = 0
+4. 데이터 타입 - String
+                Boolean
+                Number
+                Float
+                Array
+                Object
+                Symbol <- 용도가 좀... 특수하니까 보통 쓰는건 아님. 잊고 있다 필요할때 쓰자
+5. Array = [], Object = {}
+6. Object 안에 Array, Object 다 들어갈 수 있음 / 반대도 마찬가지
+7. 문자열 이을땐 + 보다 백틱 `` 사용을 권장..
+8. 함수를 return 시켜서 쓰는게 바람직
+
+9. DOM(Document Object Model) : html 문서 인터페이스. ex) consolg.log 에서 log 같은것
+                                                        const title = document.getElementById("title");
+                                                        title.innerHTML = "Hi From JS"; -> title을 객체로 만들어서 실제 홈페이지에 HTML에 뭐가 써있든 Hi From JS 라고 뜸ㅇ0ㅇ
+
+    cf ) 3개 차이점.
+        1. getElementById gets only by ID                                   getElementById("title")
+        2. getElementsByClassName gets MANY elements by classname           getElementsByClassName("title")
+        3. querySelector gets ONE element by any selector you want.         querySelector(id의 경우 "#title" / class의 경우 ".title")
+
+10. window.addEventListener("resize", handleResize);       대기하다 이벤트 발생했을 때 함수 호출
+    window.addEventListener("resize", handleResize());     웹 페이지 들어가자 마자 함수 즉시 호출
+
+11. JS에서 색깔을 비교할땐(thisColor === thatColor) rgb(a, b, c); 형식을 써야함. 댓글에서 헥사값은 적용이 안된다고 카더라.
+
+12. setInterval(func, time(m/s)) 실행할 함수, 실행할 시간 간격
+
+13. weather의 fetch 뒤에 있는 then() :
+    fetch(api 가져오는거)한 데이터가 제대로 완전히 들어오면 실행하는 함수
+    fetch 기다리고 -> 응답 기다리고 -> 가져온 json 데이터에서 지역명이랑 온도 parse해서 화면에 띄우고 완료.
